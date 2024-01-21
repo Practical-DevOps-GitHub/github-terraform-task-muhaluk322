@@ -1,1 +1,1 @@
-pull_request_template.md
+/home/administrator/Documents/sprint8/task1/pull_request_template.md

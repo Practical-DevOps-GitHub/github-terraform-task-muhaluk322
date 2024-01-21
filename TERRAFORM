@@ -86,7 +86,7 @@ resource "github_repository_file" "pr_template_develop" {
 resource "github_repository_deploy_key" "example_repository_deploy_key" {
   repository = github_repository.example_repo.name
   title      = "DEPLOY_KEY"
-  key        = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/+mBWuUia/bPE+Czh5Y/GNWkN7u19AqlcLAGVut3xc5oS6Ow+XAABc+z6/Gkp0KiRJw6K81/myolqWleskiOqoCh5J2PRkhHR9LRH1iKnldOqdnZkE5ku0rEfoxSiLnqpoat6vP/Orak90V06MukHKsrul5PM8GvMAz4JRp4m7IEiKmyuCzj7cWHwgj2BkIRg8CPlAWN0knewhPv/kd/zF0FfdaUi2uBfLapfGho7aXelRmyiajrpzyg7TAsjDvrgB8ggRzLStvxazm7sJUfzGquiEVl51ArqFnmZFpSkj1F4t2bbXhSiCdsB5BTkcwPHqlFznqtxUMMMgTd+030j administrator@administrator-VirtualBox"
+  key        = "----"
   read_only  = "false"
 }
 
@@ -94,7 +94,7 @@ resource "github_repository_webhook" "discord_webhook" {
   repository   = github_repository.example_repo.name
   events       = ["pull_request"]
   configuration {
-    url          = "https://discord.com/api/webhooks/1193172225583489064/G0Ph57fFCsJSW_T8frzs3NdjvhySjNLD7Xd7Qd8_qCzWCxBS1_NBxJGXPqnaE53tbsd2/github"
+    url          = "https://discord.com/api/webhooks/1193172225583489064/G0Ph57fFCsJSW_T8frzs3NdjvhyS"
     content_type = "json"
   }
 }
@@ -102,7 +102,7 @@ resource "github_repository_webhook" "discord_webhook" {
 resource "github_actions_secret" "pat_secret" {
   repository = github_repository.example_repo.name
   secret_name  = "PAT"
-  plaintext_value = "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"
+  plaintext_value = "---"
 }
 
 variable "gh_token" {
